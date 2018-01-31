@@ -1,6 +1,7 @@
 
 ###> symfony/framework-bundle ###
 .env
+.sass-cache/
 /.idea/
 /public/bundles/
 /var/

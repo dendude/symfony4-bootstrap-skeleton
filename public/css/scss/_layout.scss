@@ -1,0 +1,19 @@
+@import "vars";
+
+html, body {
+  background: $base-bg;
+  height: 100%;
+}
+
+.wrapper {
+  display: table;
+  height: 100%;
+  background: $wrapper-bg;
+  width: $wrapper-width;
+  margin: 0 auto;
+}
+
+.content {
+  display: table-row;
+  height: 100%;
+}

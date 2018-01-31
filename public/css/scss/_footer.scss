@@ -1,0 +1,7 @@
+@import "vars";
+
+.footer {
+  height: $footer-height;
+  margin-top: -($footer-height);
+  background: $footer-bg;
+}

@@ -1,0 +1,34 @@
+@import "../../lib/bootstrap/scss/functions";
+@import "../../lib/bootstrap/scss/variables";
+
+@import "vars";
+@import "functions";
+
+
+// set useful classes
+
+@include class-loop('m-t', 'margin-top', 0, 100, 5, 'px');
+@include class-loop('m-r', 'margin-right', 0, 100, 5, 'px');
+@include class-loop('m-b', 'margin-bottom', 0, 100, 5, 'px');
+@include class-loop('m-l', 'margin-left', 0, 100, 5, 'px');
+
+@include class-loop('p-t', 'padding-top', 0, 100, 5, 'px');
+@include class-loop('p-r', 'padding-right', 0, 100, 5, 'px');
+@include class-loop('p-b', 'padding-bottom', 0, 100, 5, 'px');
+@include class-loop('p-l', 'padding-left', 0, 100, 5, 'px');
+
+
+// set adaptive top spaces
+
+$w: length($grid-breakpoints);
+@each $k, $v in $grid-breakpoints {
+
+  @media all and (min-width: #{$v}) {
+    // media queries
+    @each $tk, $tv in $top-spaces {
+      .top-space-#{$tk} { margin-top: #{ceil($tv / $w)}; }
+    }
+  }
+
+  $w: $w - 1;
+}

@@ -1,0 +1,11 @@
+// generate loop styles
+
+@mixin class-loop($class, $property, $min, $max, $step, $suf) {
+
+  $i: $min;
+
+  @while $i <= $max {
+    .#{$class}-#{$i} { #{$property}: $i#{ (if($i == 0, '', $suf)) }; }
+    $i: $i + $step;
+  }
+}

@@ -1,0 +1,7 @@
+@import "vars";
+
+.header {
+  height: $header-height;
+  margin-bottom: -($header-height);
+  background: $header-bg;
+}

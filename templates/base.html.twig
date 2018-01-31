@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
     <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>{% block title %}{% endblock %} :: ARIS</title>
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('lib/bootstrap/dist/css/bootstrap.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('lib/font-awesome/css/font-awesome.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+        {% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+    <body class="body-{% block body_class %}page{% endblock %}">
+        <div class="wrapper">
+            {% include 'header.html.twig' %}
+            <div class="content">{% block content %}{% endblock %}</div>
+            {% include 'footer.html.twig' %}
+        </div>
+        {% block javascripts %}
+            <script src="{{ asset('lib/jquery/dist/jquery.min.js') }}"></script>
+            <script src="{{ asset('lib/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+        {% endblock %}
     </body>
 </html>

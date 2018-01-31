@@ -1,0 +1,17 @@
+{
+  "name": "aris",
+  "authors": [
+    "Denis Kravtsov <denis.kravtsov.1986@mail.ru>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

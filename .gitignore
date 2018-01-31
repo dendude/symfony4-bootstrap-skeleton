@@ -6,6 +6,7 @@
 /var/
 /vendor/
 /public/lib
+/bower_components/
 ###< symfony/framework-bundle ###
 
 ###> symfony/web-server-bundle ###
